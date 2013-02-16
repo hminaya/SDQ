@@ -11,6 +11,8 @@
 		}
 	};
 
+	var cedulasLocas = ['00000000018','11111111123'];
+
 	if (!$.SDQ) {
 		$.SDQ = {};	
 	};
@@ -34,9 +36,42 @@
 			return false
 		};
 
-		// Validar el listado
+		// Validar que solo sean numeros
+		
 
-		// Validar el algoritmo
+		// Validar el listado
+		if (jQuery.inArray(datos, cedulasLocas) > -1){
+			return true;
+		}
+
+		// Validar el algoritmo (LUHN)
+		var digitoVerificador = parseInt(datos.substring(datos.length-1, datos.length));
+		var digitos = datos.substring(0, datos.length-1);
+
+		var suma = 0;
+		for (i=0; i < digitos.length; i++){
+			suma += parseInt(digitos.substring(i, i+1));
+		}
+
+		var jce = new Array (0,1,2,3,4,-4,-3,-2,-1,0);
+		for (i=digitos.length-1; i>0; i-=2){
+			var jceIndex = parseInt(digitos.substring(i, i+1));
+			var jceValue = jce[jceIndex];
+		}
+
+		var modulo10 = suma % 10;
+		modulo10 = 10 - modulo10;
+		if (modulo10 == 10) {	
+			modulo10=0
+		};
+
+		if (isNaN(modulo10)) {
+			return false;
+		};
+
+		if (digitoVerificador != modulo10) {
+			return false;
+		};
 
 		return true;
 
