@@ -7,10 +7,11 @@
 		  console.log(this.val());
 		},
 		RNC : function( options ) {
-		  console.log(this.val());
+		  //console.log(this.val());
 		}
 	};
 
+	// Estas cedulas fueron emitidas por la JCE y no cumplen con el digito verificador
 	var cedulasLocas = ['00000000018','11111111123'];
 
 	if (!$.SDQ) {
@@ -37,7 +38,7 @@
 		};
 
 		// Validar que solo sean numeros
-		
+
 
 		// Validar el listado
 		if (jQuery.inArray(datos, cedulasLocas) > -1){
