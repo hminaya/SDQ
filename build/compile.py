@@ -7,7 +7,7 @@ js_source = f.read()
 #Parametros para el request
 params = urllib.urlencode([
     ('js_code', js_source),
-    ('compilation_level', 'SIMPLE'),
+    ('compilation_level', 'SIMPLE_OPTIMIZATIONS'),
     ('output_format', 'text'),
     ('output_info', 'compiled_code'),
   ])
