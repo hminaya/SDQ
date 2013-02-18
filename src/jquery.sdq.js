@@ -3,11 +3,14 @@
 	var validarCedula;
 
 	var methods = {
-		Cedula : function( options ) { 
-		  console.log(this.val());
+		cedula : function( options ) { 
+		  // TODO: Implementar logica para formatear el campo y que solo reciba una cedula
 		},
-		RNC : function( options ) {
-		  //console.log(this.val());
+		rnc : function( options ) {
+		  // TODO: Implementar logica para formatear el campo y que solo reciba un RNC
+		},
+		nss : function( options ) {
+		  // TODO: Implementar logica para formatear el campo y que solo reciba un NSS
 		}
 	};
 
@@ -97,6 +100,21 @@
 
 		// Validar longitud
 		if ( (datos.length != 9) && (datos.length != 11)  ){
+			return false
+		};
+
+		// Validar el listado
+
+		// Validar el algoritmo
+
+		return true;
+
+	};
+
+	$.SDQ.validarNSS = function( datos ) {
+
+		// Validar longitud
+		if (datos.length != 9){
 			return false
 		};
 
