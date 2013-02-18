@@ -38,7 +38,9 @@
 		};
 
 		// Validar que solo sean numeros
-
+		if (!/^\d+$/.test(datos)) {
+			return false;
+		}
 
 		// Validar el listado
 		if (jQuery.inArray(datos, cedulasLocas) > -1){

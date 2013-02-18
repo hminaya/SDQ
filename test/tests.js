@@ -21,6 +21,13 @@ test( "Debe contener el digito verificador correcto (LUHN)", function() {
   ok( $.SDQ.validarCedula('00113918204') == false, "Passed!" );
 });
 
+test( "Solo deben ser dígitos", function() {
+  ok( $.SDQ.validarCedula('00113918205') == true, "Passed!" );
+  ok( $.SDQ.validarCedula('0011391820x') == false, "Passed!" );
+  ok( $.SDQ.validarCedula('x0113918205') == false, "Passed!" );
+  ok( $.SDQ.validarCedula('00113x18205') == false, "Passed!" );
+});
+
 /*
 module( "validarRNC");
 test( "La longitud no debe ser menor de 9", function() {
