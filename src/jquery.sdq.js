@@ -14,6 +14,9 @@
 	// Estas cedulas fueron emitidas por la JCE y no cumplen con el digito verificador
 	var cedulasLocas = ['00000000018','11111111123'];
 
+	//-----------------------//
+	// Definición del plugin //
+
 	if (!$.SDQ) {
 		$.SDQ = {};	
 	};
@@ -30,6 +33,16 @@
 
 	};
 
+	//--------------------//
+	// Métodos del plugin //
+
+	/**
+	 * Valida un dato como cédula de identidad y electoral.
+	 *
+	 * @param {string} <datos> El dato a validar.
+	 *
+	 * @return {boolean} `true` si el datos es una cédula de identidad y electoral válida, de lo contrario `false`.
+	 */
 	$.SDQ.validarCedula = function( datos ) {
 
 		// Validar longitud
