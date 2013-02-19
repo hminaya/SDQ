@@ -4,7 +4,11 @@
 
 	var methods = {
 		cedula : function( options ) { 
-		  // TODO: Implementar logica para formatear el campo y que solo reciba una cedula
+		  
+		  	this.on('keypress', soloNumeros);
+			this.on('keypress', formatCedula);
+			return this;
+
 		},
 		rnc : function( options ) {
 		  // TODO: Implementar logica para formatear el campo y que solo reciba un RNC
@@ -35,6 +39,40 @@
 		}
 
 	};
+
+
+	//--------------------//
+	// Métodos privados del plugin //
+
+	formatCedula = function(e){
+		var entrada;
+
+		entrada = String.fromCharCode(e.which);
+		if (!/^\d+$/.test(entrada)) {
+  			return;
+		}
+
+		// TODO: Falta mucho aqui aun!!!!....
+
+	};
+
+	soloNumeros = function(e) {
+	    var input;
+	    if (e.metaKey || e.ctrlKey) {
+	      return true;
+	    }
+	    if (e.which === 32) {
+	      return false;
+	    }
+	    if (e.which === 0) {
+	      return true;
+	    }
+	    if (e.which < 33) {
+	      return true;
+	    }
+	    input = String.fromCharCode(e.which);
+	    return !!/[\d\s]/.test(input);
+  	};
 
 	//--------------------//
 	// Métodos del plugin //
