@@ -73,9 +73,10 @@
 		}
 
 		var jce = new Array (0,1,2,3,4,-4,-3,-2,-1,0);
-		for (i=digitos.length-1; i>0; i-=2){
+		for (i=digitos.length-1; i>=0; i-=2){
 			var jceIndex = parseInt(digitos.substring(i, i+1));
 			var jceValue = jce[jceIndex];
+			suma += jceValue;
 		}
 
 		var modulo10 = suma % 10;
@@ -85,10 +86,15 @@
 		};
 
 		if (isNaN(modulo10)) {
+			//console.log("isNaN-modulo10");
 			return false;
 		};
 
 		if (digitoVerificador != modulo10) {
+			//console.log("digitoVerificador != modulo10");
+			//console.log(datos);
+			//console.log(digitos);
+			//console.log(modulo10);
 			return false;
 		};
 

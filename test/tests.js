@@ -19,6 +19,7 @@ test( "Puede estar dentro de las cedulas que no cumplen con el algoritmo de LUHN
 test( "Debe contener el digito verificador correcto (LUHN)", function() {
   ok( $.SDQ.validarCedula('00113918205') == true, "Passed!" );
   ok( $.SDQ.validarCedula('00113918204') == false, "Passed!" );
+  ok( $.SDQ.validarCedula('00113918213') == true, "Passed!" );
 });
 
 test( "Solo deben ser dígitos", function() {

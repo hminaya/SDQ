@@ -3,8 +3,28 @@
 	<head>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   		<script src="../src/jquery.sdq.js"></script>
+  		<script type="text/javascript">
+  			$(function(){
+
+  				$("#ValidarCedula").click(function(){
+
+  					var entrada = $("#Cedula").val();
+
+  					if ($.SDQ.validarCedula(entrada)) {
+  						alert('La cedula es valida');
+  					} else{
+  						alert('La cedula es invalida');
+  					};
+
+  				});
+
+  			});
+  		</script>
 	</head>
 	<body>
-			<input type="text" id="Cedula" name="Cedula"/>
+
+		Cedula: 
+		<input type="text" id="Cedula" name="Cedula"/>
+		<input type="button" value="Validar cedula" id="ValidarCedula">
 	</body>
 </html>
