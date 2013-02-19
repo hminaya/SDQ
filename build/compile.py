@@ -1,8 +1,9 @@
 import httplib, urllib, sys, os
 
 #Buscar el codigo fuente
-f = open('../src/jquery.sdq.js', 'r')
-js_source = f.read()
+fa = open('../src/jquery.sdq-cedulas.js', 'r')
+fb = open('../src/jquery.sdq.js', 'r')
+js_source = fa.read() + fb.read();
 
 #Parametros para el request
 params = urllib.urlencode([

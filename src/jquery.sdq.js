@@ -7,6 +7,7 @@
 		  
 		  	this.on('keypress', soloNumeros);
 			this.on('keypress', formatCedula);
+			this.on('paste', antiPaste);
 			return this;
 
 		},
@@ -18,10 +19,14 @@
 		}
 	};
 
-	// Estas cedulas fueron emitidas por la JCE y no cumplen con el digito verificador
-	var cedulasLocas = ['00000000018','11111111123'];
+	// Las cedulas estan en el archivo j.query.sdq-cedulas.js que luego se junta al compilarlo
+	// Se agrego esta validacion para poder trabajar con el fuente y no tener que usar el /lib/
+	// para las pruebas y desarrollo
+	if (!cedulasLocas) {
+		var cedulasLocas = ['00000000018','11111111123'];
+	};
 
-	//-----------------------//
+	//------------------------//
 	// Definición del plugin //
 
 	if (!$.SDQ) {
@@ -41,19 +46,47 @@
 	};
 
 
-	//--------------------//
+	//------------------------------//
 	// Métodos privados del plugin //
 
 	formatCedula = function(e){
-		var entrada;
+		var entrada, valorCampo, longitudCampo, longitudPermitida;
+
+		longitudPermitida = 11;
 
 		entrada = String.fromCharCode(e.which);
 		if (!/^\d+$/.test(entrada)) {
-  			return;
+  			return false;
 		}
+
+		valorCampo = $(e.currentTarget).val();
+
+		longitudCampo = (valorCampo.replace(/\D/g, '') + entrada).length;
+
+		if (longitudCampo > longitudPermitida) {
+			return false;
+		};
+
+		return true;
+
 
 		// TODO: Falta mucho aqui aun!!!!....
 
+	};
+
+	antiPaste = function(e){
+
+		valorAnterior = $(e.currentTarget).val();
+	    
+		return setTimeout(function(){
+			valor = $(e.currentTarget).val();
+
+			if (!/^\d+$/.test(valor)) {
+	  			$(e.currentTarget).val(valorAnterior);
+			}
+
+		});
+	    
 	};
 
 	soloNumeros = function(e) {
@@ -74,8 +107,8 @@
 	    return !!/[\d\s]/.test(input);
   	};
 
-	//--------------------//
-	// Métodos del plugin //
+	//------------------------------//
+	// Métodos publicos del plugin //
 
 	/**
 	 * Valida un dato como cédula de identidad y electoral.
