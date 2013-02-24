@@ -1,0 +1,36 @@
+{
+    "name": "sdq",
+    "title": "jQuery SDQ",
+    "description": "jQuery plugin para validar cedulas y otros documentos utilizados en la Republica Dominicana.",
+    "keywords": [
+        "cedula",
+        "rnc",
+        "rd"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "Hector Minaya",
+        "url": "http://www.HectorMinaya.com"
+    },
+    "maintainers": [
+        {
+            "name": "Hector Minaya",
+            "email": "hminaya@gmail.com",
+            "url": "http://www.HectorMinaya.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/hminaya/SDQ/blob/master/MIT-LICENSE.TXT"
+        }
+    ],
+    "bugs": "https://github.com/hminaya/SDQ/issues",
+    "homepage": "https://github.com/hminaya/SDQ",
+    "docs": "https://github.com/hminaya/SDQ",
+    "demo": "https://github.com/hminaya/SDQ/tree/master/example",
+    "download": "https://github.com/hminaya/SDQ/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.8"
+    }
+}
