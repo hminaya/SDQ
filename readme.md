@@ -1,6 +1,6 @@
 # jQuery.SDQ
 
-###Esta libreria aun se encuentra en ALPHA, aun no se recomienda el uso para sistemas en producción.
+###Esta libreria aun se encuentra en BETA, cualquier error que encuentre puede reportarlo en https://github.com/hminaya/SDQ/issues.
 
 Es un plugin de jQuery para validar diversos tipos de documentos y darle formato a los campos de entradas.
 
