@@ -130,46 +130,12 @@
 		}
 
 		// Validar el listado
-		if (jQuery.inArray(datos, cedulasLocas) > -1){
+		if (cedulasLocas.hasOwnProperty(datos)) {
 			return true;
 		}
 
 		// Validar el algoritmo (LUHN)
-		var digitoVerificador = parseInt(datos.substring(datos.length-1, datos.length));
-		var digitos = datos.substring(0, datos.length-1);
-
-		var suma = 0;
-		for (i=0; i < digitos.length; i++){
-			suma += parseInt(digitos.substring(i, i+1));
-		}
-
-		var jce = new Array (0,1,2,3,4,-4,-3,-2,-1,0);
-		for (i=digitos.length-1; i>=0; i-=2){
-			var jceIndex = parseInt(digitos.substring(i, i+1));
-			var jceValue = jce[jceIndex];
-			suma += jceValue;
-		}
-
-		var modulo10 = suma % 10;
-		modulo10 = 10 - modulo10;
-		if (modulo10 == 10) {	
-			modulo10=0
-		};
-
-		if (isNaN(modulo10)) {
-			//console.log("isNaN-modulo10");
-			return false;
-		};
-
-		if (digitoVerificador != modulo10) {
-			//console.log("digitoVerificador != modulo10");
-			//console.log(datos);
-			//console.log(digitos);
-			//console.log(modulo10);
-			return false;
-		};
-
-		return true;
+		return ValMod10(datos);
 
 	};
 
@@ -182,9 +148,8 @@
 
 		// Validar el listado
 
-		// Validar el algoritmo
-
-		return true;
+		// Validar el algoritmo (LUHN)
+		return ValMod10(datos);
 
 	};
 
@@ -205,3 +170,35 @@
 
 
 })( jQuery );
+
+function ValMod10(datos) {
+	var checksum = 0; // running checksum total
+	var mychar = ""; // proximo char 
+	var j = 1; // toma el valor 1 o 2
+
+	if (cedulasLocas.hasOwnProperty(datos)) {
+		return true;
+	}
+	// Procesa cada digito comenzando por la derecha
+	var calc;
+	for (i = datos.length - 1; i >= 0; i--) {
+		// Extrae el siguiente digito y multiplica por 1 o 2 en digitos alternativos
+		calc = Number(datos.charAt(i)) * j;
+		// Si el resultado es de 2 digitos agrega 1 al checksum total
+		if (calc > 9) {
+			checksum = checksum + 1;
+			calc = calc - 10;
+		}
+		// Agrega los elmentos unitarios al checksum total
+		checksum = checksum + calc;
+		// Cambia el valor de j
+		if (j == 1) {
+			j = 2
+		} else {
+			j = 1
+		};
+	}
+	// Listo - si el checksum es divisible por 10, es un modulo 10 valido
+	// Si no, reporta error.
+	return (checksum % 10 == 0);
+}
