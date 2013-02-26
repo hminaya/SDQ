@@ -19,7 +19,7 @@
 		}
 	};
 
-	// Las cedulas estan en el archivo j.query.sdq-cedulas.js que luego se junta al compilarlo
+	// Las cedulas estan en el archivo jquery.sdq-cedulas.js que luego se junta al compilarlo
 	// Se agrego esta validacion para poder trabajar con el fuente y no tener que usar el /lib/
 	// para las pruebas y desarrollo
 	if (!cedulasLocas) {
@@ -176,9 +176,6 @@ function ValMod10(datos) {
 	var mychar = ""; // proximo char 
 	var j = 1; // toma el valor 1 o 2
 
-	if (cedulasLocas.hasOwnProperty(datos)) {
-		return true;
-	}
 	// Procesa cada digito comenzando por la derecha
 	var calc;
 	for (i = datos.length - 1; i >= 0; i--) {
