@@ -29,7 +29,7 @@ Los tipos de documentos que se manejan son:
 ##¿Como incluirlo en su proyecto?
 
 ####Opción #1
-Puedes bajar la ultima versión de esta libreria, disponible en https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js e incluirlo junto con sus otros scripts/
+Puedes bajar la ultima versión de esta libreria, disponible en https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js e incluirlo junto con sus otros scripts.
 
 ####Opción #2
 Puedes hacer referencia directamente a la ultima versión de la libreria, hosteada en github:
