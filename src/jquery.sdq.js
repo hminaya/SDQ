@@ -49,6 +49,35 @@
 	//------------------------------//
 	// Métodos privados del plugin //
 
+	function validarMod10(datos) {
+		var checksum = 0; // running checksum total
+		var mychar = ""; // proximo char 
+		var j = 1; // toma el valor 1 o 2
+
+		// Procesa cada digito comenzando por la derecha
+		var calc;
+		for (i = datos.length - 1; i >= 0; i--) {
+			// Extrae el siguiente digito y multiplica por 1 o 2 en digitos alternativos
+			calc = Number(datos.charAt(i)) * j;
+			// Si el resultado es de 2 digitos agrega 1 al checksum total
+			if (calc > 9) {
+				checksum = checksum + 1;
+				calc = calc - 10;
+			}
+			// Agrega los elmentos unitarios al checksum total
+			checksum = checksum + calc;
+			// Cambia el valor de j
+			if (j == 1) {
+				j = 2
+			} else {
+				j = 1
+			};
+		}
+		// Listo - si el checksum es divisible por 10, es un modulo 10 valido
+		// Si no, reporta error.
+		return (checksum % 10 == 0);
+	}
+
 	formatCedula = function(e){
 		var entrada, valorCampo, longitudCampo, longitudPermitida;
 
@@ -135,7 +164,7 @@
 		}
 
 		// Validar el algoritmo (LUHN)
-		return ValMod10(datos);
+		return validarMod10(datos);
 
 	};
 
@@ -146,10 +175,12 @@
 			return false
 		};
 
-		// Validar el listado
+		// TODO: Validar el listado
 
-		// Validar el algoritmo (LUHN)
-		return ValMod10(datos);
+		// TODO: Validar el algoritmo (LUHN)
+
+		// Retornar el resultado
+		return true;
 
 	};
 
@@ -160,42 +191,14 @@
 			return false
 		};
 
-		// Validar el listado
+		// TODO: Validar el listado
 
-		// Validar el algoritmo
+		// TODO: Validar el algoritmo
 
+		// Retornar el resultado
 		return true;
 
 	};
 
 
 })( jQuery );
-
-function ValMod10(datos) {
-	var checksum = 0; // running checksum total
-	var mychar = ""; // proximo char 
-	var j = 1; // toma el valor 1 o 2
-
-	// Procesa cada digito comenzando por la derecha
-	var calc;
-	for (i = datos.length - 1; i >= 0; i--) {
-		// Extrae el siguiente digito y multiplica por 1 o 2 en digitos alternativos
-		calc = Number(datos.charAt(i)) * j;
-		// Si el resultado es de 2 digitos agrega 1 al checksum total
-		if (calc > 9) {
-			checksum = checksum + 1;
-			calc = calc - 10;
-		}
-		// Agrega los elmentos unitarios al checksum total
-		checksum = checksum + calc;
-		// Cambia el valor de j
-		if (j == 1) {
-			j = 2
-		} else {
-			j = 1
-		};
-	}
-	// Listo - si el checksum es divisible por 10, es un modulo 10 valido
-	// Si no, reporta error.
-	return (checksum % 10 == 0);
-}
