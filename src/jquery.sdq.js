@@ -12,11 +12,15 @@
 
 		},
 		rnc : function( options ) {
-		  // TODO: Implementar logica para formatear el campo y que solo reciba un RNC
-		},
+		  	this.on('keypress', soloNumeros);
+			//this.on('keypress', formatCedula);
+			this.on('paste', antiPaste);
+			return this;		},
 		nss : function( options ) {
-		  // TODO: Implementar logica para formatear el campo y que solo reciba un NSS
-		}
+		  	this.on('keypress', soloNumeros);
+			//this.on('keypress', formatCedula);
+			this.on('paste', antiPaste);
+			return this;		}
 	};
 
 	// Las cedulas estan en el archivo jquery.sdq-cedulas.js que luego se junta al compilarlo
@@ -175,6 +179,11 @@
 			return false
 		};
 
+		// Validar que solo sean numeros
+		if (!/^\d+$/.test(datos)) {
+			return false;
+		}
+
 		// TODO: Validar el listado
 
 		// TODO: Validar el algoritmo (LUHN)
@@ -191,6 +200,11 @@
 			return false
 		};
 
+		// Validar que solo sean numeros
+		if (!/^\d+$/.test(datos)) {
+			return false;
+		}
+
 		// TODO: Validar el listado
 
 		// TODO: Validar el algoritmo
@@ -199,6 +213,5 @@
 		return true;
 
 	};
-
 
 })( jQuery );
