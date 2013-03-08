@@ -67,7 +67,7 @@ $.SDQ.validarCedula('00113918315'); // => False
 Le da formato a un campo para introducir un RNC:
 * Solo permite que se puedan introducir numeros
 * Maneja el paste para evitar chars invalidos
-* Solo permite longitud de XX //TODO: Pendiente
+* Solo permite longitud de 9
 
 Ejemplo:
 
@@ -77,10 +77,10 @@ $('#campoRNC').SDQ('rnc');
 
 ### $.SDQ.validarRNC(numero);
 Valida si la información recibida corresponde a un RNC:
-* Compara contra el algoritmo XX // TODO: Pendiente
+* Compara contra el algoritmo
 * Maneja un listado de RNCs que fueron emitidos por la DGII, pero que no cumplen con el algoritmo anterior //TODO: Pendiente
 * Solo puede contener numeros
-* Valida la longitud //TODO: Pendiente
+* Valida la longitud
 
 Ejemplo:
 
