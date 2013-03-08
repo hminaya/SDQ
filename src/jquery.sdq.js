@@ -75,7 +75,37 @@
 		// Listo - si el checksum es divisible por 10, es un modulo 10 valido
 		// Si no, reporta error.
 		return (checksum % 10 == 0);
-	}
+	};
+
+    function validarModRNC(datos){
+        var suma = 0;
+        var digito;
+        var pesoRNC = [7,9,8,6,5,4,3,2]; //Peso de cada uno de los elementos del rnc. Es parecido al algoritmo del Mod10 pero el RNC utiliza su propio sistema de peso.
+
+        datos = datos.split("").map(function(t){return parseInt(t)}); //Convierte el string que contiene el rnc en un arreglo de enteros.
+
+        for (var i = pesoRNC.length - 1; i >= 0; i--) {
+            suma = suma + (pesoRNC[i] * datos[i]);
+        };
+
+        resto = suma % 11;
+
+        switch(resto){
+            case 0:
+                digito = 2;
+            case 1:
+                digito = 1;
+            default:
+                digito = 11 - resto;
+        }
+
+        // Validar el resultado con el digito validador, que en caso del RNC es el ultimo digito.
+        if (digito == datos.slice(-1)[0]){
+            return true;
+        } else {
+            return false;
+        }
+    };
 
 	formatCedula = function(e){
 		var entrada, valorCampo, longitudCampo, longitudPermitida;
@@ -179,44 +209,10 @@
 			return false;
 		}
 
-		var suma = 0;
+		// TODO: Verificar si existe un listado que no cumpla con el algoritmo
 
-		var digito;
-
-		var pesoRNC = [7,9,8,6,5,4,3,2]; //Peso de cada uno de los elementos del rnc. Es parecido al algoritmo del Mod10 pero el RNC utiliza su propio sistema de peso.
-
-		datos = datos.split("").map(function(t){return parseInt(t)}); //Convierte el string que contiene el rnc en un arreglo de enteros.
-
-		for (var i = pesoRNC.length - 1; i >= 0; i--) {
-			suma = suma + (pesoRNC[i] * datos[i]);
-		};
-
-		resto = suma % 11;
-
-		switch(resto){
-			case 0:
-				digito = 2;
-			case 1:
-				digito = 1;
-			default:
-				digito = 11 - resto;
-		}
-
-		// Validar el resultado con el digito validador, que en caso del RNC es el ultimo digito.
-		if (digito == datos.slice(-1)[0]){
-			return true;
-		} else {
-			return false;
-		}
-
-
-
-		// TODO: Validar el listado
-
-		// TODO: Validar el algoritmo (LUHN)
-
-		// Retornar el resultado
-		return true;
+        // Validar el algoritmo de la DGII
+        return validarModRNC(datos);
 
 	};
 

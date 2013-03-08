@@ -18,9 +18,9 @@ test( "Puede estar dentro de las cedulas que no cumplen con el algoritmo de LUHN
 });
 
 test( "Debe contener el digito verificador correcto (LUHN)", function() {
-  ok( $.SDQ.validarCedula('00113918205') == true, "Passed!" );
-  ok( $.SDQ.validarCedula('00113918204') == false, "Passed!" );
-  ok( $.SDQ.validarCedula('00113918213') == true, "Passed!" );
+  ok( $.SDQ.validarCedula('00113918205') == true, "Cedula verdadera!" );
+  ok( $.SDQ.validarCedula('00113918204') == false, "Cedula falsa!" );
+  ok( $.SDQ.validarCedula('00113918213') == true, "Cedula verdadera!" );
 });
 
 test( "Solo deben ser dígitos", function() {
@@ -48,7 +48,7 @@ test( "Solo debe contener numeros", function() {
   ok( $.SDQ.validarRNC('acvbnmkjh') == false, "Passed!" );
 });
 test( "Debe contener el codigo verificador correcto. (Mod11 Custom)", function() {
-  ok( $.SDQ.validarRNC('122011226') == true, "Passed!" ); //RNC INDUVECA
-  ok( $.SDQ.validarRNC('112031226') == false, "Passed!" ); //RNC FALSO
-  ok( $.SDQ.validarRNC('101637587') == true, "Passed!" ); //RNC Body Shop
+  ok( $.SDQ.validarRNC('122011226') == true, "RNC verdadero!" );
+  ok( $.SDQ.validarRNC('112031226') == false, "RNC falso" );
+  ok( $.SDQ.validarRNC('101637587') == true, "RNC verdadero!" );
 });
