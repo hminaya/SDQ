@@ -23,18 +23,14 @@
 			return this;		}
 	};
 
-	// Las cedulas estan en el archivo jquery.sdq-cedulas.js que luego se junta al compilarlo
-	// Se agrego esta validacion para poder trabajar con el fuente y no tener que usar el /lib/
-	// para las pruebas y desarrollo
-	if (!cedulasLocas) {
-		var cedulasLocas = ['00000000018','11111111123'];
-	};
+	// Estas cedulas fueron emitidas por la JCE, pero no cumplen con el digito verificador, por lo cual deben ser verificadas por separado.
+    var cedulasLocas = ['00000000018','11111111123','00100759932','00105606543','00114272360','00200123640','00200409772','00800106971','01200004166','01400074875','01400000282','03103749672','03200066940','03800032522','03900192284','04900026260','05900072869','07700009346','00114532330','03121982479','40200700675','40200639953','00121581750','00119161853','22321581834','00121581800','09421581768','22721581818','90001200901','00301200901','40200452735','40200401324','10621581792'];
 
-	//------------------------//
+    //------------------------//
 	// Definición del plugin //
 
 	if (!$.SDQ) {
-		$.SDQ = {};	
+		$.SDQ = {};
 	};
 
 	$.fn.SDQ = function( method ) {
@@ -48,7 +44,6 @@
 		}
 
 	};
-
 
 	//------------------------------//
 	// Métodos privados del plugin //
@@ -163,7 +158,7 @@
 		}
 
 		// Validar el listado
-		if (cedulasLocas.hasOwnProperty(datos)) {
+		if (jQuery.inArray(datos, cedulasLocas) > -1) {
 			return true;
 		}
 

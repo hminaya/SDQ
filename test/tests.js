@@ -12,8 +12,9 @@ test( "Solo debe contener numeros", function() {
 });
 
 test( "Puede estar dentro de las cedulas que no cumplen con el algoritmo de LUHN", function() {
-  ok( $.SDQ.validarCedula('00000000018') == true, "Passed!" );
-  ok( $.SDQ.validarCedula('11111111123') == true, "Passed!" );
+  ok( $.SDQ.validarCedula('00105606543') == true, "Probando con la cedula 00105606543, la cual esta en el listado de cedulas emitidas que no cumplen con el algoritmo de LUHN" );
+  ok( $.SDQ.validarCedula('00114272360') == true, "Probando con la cedula 00114272360, la cual esta en el listado de cedulas emitidas que no cumplen con el algoritmo de LUHN" );
+  ok( $.SDQ.validarCedula('00114272368') == false, "Probando con la cedula 00114272368, la cual NO esta en el listado de cedulas emitidas que no cumplen con el algoritmo de LUHN" );
 });
 
 test( "Debe contener el digito verificador correcto (LUHN)", function() {
