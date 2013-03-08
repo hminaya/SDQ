@@ -21,7 +21,7 @@ if (!$.SDQ.validarCedula(entrada)) {
 
 Los tipos de documentos que se manejan son:
 * Cedula de identidad y electoral - JCE
-* Registro Nacional de Contribuyente (RNC) - DGII {pendiente}
+* Registro Nacional de Contribuyente (RNC) - DGII {acaba de ser agregado - beta}
 * Numero de Seguridad Social (NSS) - TSS {pendiente}
 
 ##¿Como incluirlo en su proyecto?

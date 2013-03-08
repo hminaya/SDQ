@@ -5,6 +5,7 @@
     <ignored path="sdq.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/jquery.sdq.js" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362769836641" ignored="false" />
+    <file path="/readme.md" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362770851484" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,17 +24,7 @@
     <favorites_list name="sdq" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="sdq.jquery.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sdq.jquery.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="19" selection-start="20" selection-end="20" vertical-scroll-proportion="0.024834437">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -47,6 +38,8 @@
         <option value="$PROJECT_DIR$/test/tests.html" />
         <option value="$PROJECT_DIR$/src/jquery.sdq.js" />
         <option value="$PROJECT_DIR$/sdq.jquery.json" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/build/compile.py" />
       </list>
     </option>
   </component>
@@ -100,6 +93,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -129,12 +164,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17740652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17740652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -224,24 +259,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sdq.jquery.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="19" selection-start="20" selection-end="20" vertical-scroll-proportion="0.024834437">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/jquery.sdq.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="8" selection-start="4173" selection-end="4173" vertical-scroll-proportion="0.70894307">
+        <state line="163" column="8" selection-start="4173" selection-end="4173" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#1722#2512#0" expanded="false" />
             <element signature="e#2541#2967#0" expanded="false" />
             <element signature="e#2994#3213#0" expanded="false" />
             <element signature="e#3243#3566#0" expanded="false" />
             <element signature="e#3642#3875#0" expanded="false" />
-            <element signature="e#4281#4586#0" expanded="false" />
-            <element signature="e#4627#4896#0" expanded="false" />
+            <element signature="e#5369#5638#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdq.jquery.json">
+    <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="20" selection-end="20" vertical-scroll-proportion="0.024834437">
+        <state line="23" column="79" selection-start="685" selection-end="685" vertical-scroll-proportion="0.5609756">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jquery.sdq.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/compile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0955414">
           <folding />
         </state>
       </provider>
