@@ -18,6 +18,18 @@
 
   				});
 
+          $("#ValidarRNC").click(function(){
+
+            var entrada = $("#RNC").val();
+
+            if ($.SDQ.validarRNC(entrada)) {
+              alert('El RNC es valido');
+            } else{
+              alert('El RNC es invalido');
+            };
+
+          });
+
   				$("#CedulaFormato").SDQ("cedula");
 
   			});
@@ -31,5 +43,10 @@
 		<br><br>
 		Cedula con formato:
 		<input type="text" id="CedulaFormato" name="CedulaFormato"/>
+    <br><br>
+    RNC: 
+    <input type="text" id="RNC" name="RNC"/>
+    <input type="button" value="Validar RNC" id="ValidarRNC">
+    <br><br>
 	</body>
 </html>

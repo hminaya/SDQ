@@ -29,7 +29,7 @@ test( "Solo deben ser dígitos", function() {
   ok( $.SDQ.validarCedula('00113x18205') == false, "Passed!" );
 });
 
-/*
+
 module( "validarRNC");
 test( "La longitud no debe ser menor de 9", function() {
   ok( $.SDQ.validarRNC('12345678') == false, "Passed!" );
@@ -46,4 +46,8 @@ test( "La longitud no debe ser mayor de 11", function() {
 test( "Solo debe contener numeros", function() {
   ok( $.SDQ.validarRNC('acvbnmkjh') == false, "Passed!" );
 });
-*/
+test( "Debe contener el codigo verificador correcto. (Mod11 Custom)", function() {
+  ok( $.SDQ.validarRNC('122011226') == true, "Passed!" ); //RNC INDUVECA
+  ok( $.SDQ.validarRNC('112031226') == false, "Passed!" ); //RNC FALSO
+  ok( $.SDQ.validarRNC('101637587') == true, "Passed!" ); //RNC Body Shop
+});
