@@ -4,6 +4,7 @@
     <option indent="4" />
     <option maxerr="50" />
     <option on="true" />
+    <option todo="true" />
   </component>
 </project>
 

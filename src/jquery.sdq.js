@@ -36,6 +36,9 @@
         methods = {
             cedula: function (options) {
                 this.on('keypress', soloNumeros);
+                //TODO: Aqui JsLint arroja un error de uso de una variable antes de haber sido declarada.
+                //Pero no encuentro como declarar esa funcion antes, pues todos los vars tienen que ir
+                //al inicio de la función
                 this.on('keypress', formatCedula);
                 this.on('paste', antiPaste);
                 return this;
@@ -88,7 +91,8 @@
     function validarMod10(datos) {
         var calc, i,
             checksum = 0, // running checksum total
-            mychar = "", // proximo char 
+        //TODO: Esta variable no se usa
+            mychar = '', // proximo char
             j = 1; // toma el valor 1 o 2
 
         // Procesa cada digito comenzando por la derecha
@@ -118,7 +122,7 @@
         var i, digito, resto,
             suma = 0,
 
-            //Peso de cada uno de los elementos del rnc. Es parecido al algoritmo 
+            //Peso de cada uno de los elementos del rnc. Es parecido al algoritmo
             //del Mod10 pero el RNC utiliza su propio sistema de peso.
             pesoRNC = [7, 9, 8, 6, 5, 4, 3, 2];
 
@@ -142,12 +146,12 @@
             digito = 11 - resto;
         }
 
-        // Validar el resultado con el digito validador, 
+        // Validar el resultado con el digito validador,
         //que en caso del RNC es el ultimo digito.
         return (digito === datos.slice(-1)[0]);
     }
 
-    formatCedula = function (e) {
+    function formatCedula(e) {
         var entrada, valorCampo, longitudCampo, longitudPermitida;
 
         longitudPermitida = 11;
@@ -163,23 +167,17 @@
 
         return !(longitudCampo > longitudPermitida);
 
-
-        // TODO: Falta mucho aqui aun!!!!....
-
-    };
-
-
+        //TODO: Falta mucho aqui aun!!!!...
+    }
 
     //------------------------------//
     // Métodos publicos del plugin //
 
-    /**
-	 * Valida un dato como cédula de identidad y electoral.
-	 *
-	 * @param {string} <datos> El dato a validar.
-	 * @return {boolean} `true` si el datos es una cédula de identidad 
-     * y electoral válida, de lo contrario `false`.
-	 */
+    /* Valida un dato como cédula de identidad y electoral.*/
+    /*
+    * @param {string} <datos> El dato a validar.
+    * @return {boolean} `true` si el datos es una cédula de identidad
+    */
     $.SDQ.validarCedula = function (datos) {
 
         // Validar longitud
@@ -199,7 +197,6 @@
 
         // Validar el algoritmo (LUHN)
         return validarMod10(datos);
-
     };
 
     $.SDQ.validarRNC = function (datos) {
@@ -214,7 +211,7 @@
             return false;
         }
 
-        // TODO: Verificar si existe un listado que no cumpla con el algoritmo
+        //TODO: Verificar si existe un listado que no cumpla con el algoritmo
 
         // Validar el algoritmo de la DGII
         return validarModRNC(datos);
