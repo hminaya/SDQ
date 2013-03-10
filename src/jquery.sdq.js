@@ -108,24 +108,37 @@
         return regExp.test(datos) && datos.length === 19;
     },
 
-    formatCedula = function(e) {
-        var entrada, valorCampo, longitudCampo, longitudPermitida;
+    formatCedula = function(e){
+				var entrada, valorCampo, longitudCampo, longitudPermitida, $target;
 
-        longitudPermitida = 11;
+				$target = $(e.currentTarget);
 
-        entrada = String.fromCharCode(e.which);
-        if (!/^\d+$/.test(entrada)) {
-            return false;
-        }
+				longitudPermitida = 11;
 
-        valorCampo = $(e.currentTarget).val();
+				cedulaPatron = /(^\d{3}$)|(^\d{3} \d{7}$)/;
 
-        longitudCampo = (valorCampo.replace(/\D/g, '') + entrada).length;
+				entrada = String.fromCharCode(e.which);
 
-        return !(longitudCampo > longitudPermitida);
+				if (!/^\d+$/.test(entrada)) {
+						return false;
+				}
 
-        //TODO: Falta mucho aqui aun!!!!...
-    },
+				valorCampo = $target.val();
+
+				longitudCampo = (valorCampo.replace(/\D/g, '') + entrada).length;
+
+				if (longitudCampo > longitudPermitida) {
+						return false;
+				};
+				if (cedulaPatron.test(valorCampo)){
+						e.preventDefault();
+						return $target.val(valorCampo + ' ' + entrada);;
+				} else if (cedulaPatron.test(valorCampo + entrada)) {
+						e.preventDefault();
+						return $target.val(valorCampo + entrada + ' ');
+				}
+				return true;
+		},
 
     methods = {
         cedula: function(options) {
