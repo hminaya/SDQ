@@ -69,7 +69,7 @@ module("validarNCFs");
 
 test("NCF tiene longitud y estructura correcta", function () {
     ok($.SDQ.validarNCF('A010010010100000004') === true, "NCF es valido");
-    ok($.SDQ.validarNCF('FJ10010010100000004') === false, "NCF es valido");
+    ok($.SDQ.validarNCF('FJ10010010100000004') === false, "NCF no es valido");
     ok($.SDQ.validarNCF('A0100100101000000') === false, "NCF no es valido");
     ok($.SDQ.validarNCF('A01001001010000003234') === false, "NCF no es valido");
 });
