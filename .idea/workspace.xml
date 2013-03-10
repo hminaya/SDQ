@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8b35231-e66c-4b7d-b618-4b9201702734" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery.sdq.js" afterPath="$PROJECT_DIR$/lib/jquery.sdq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/ejemplo.html" afterPath="$PROJECT_DIR$/example/ejemplo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jquery.sdq.js" afterPath="$PROJECT_DIR$/src/jquery.sdq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLinters/jslint.xml" afterPath="$PROJECT_DIR$/.idea/jsLinters/jslint.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/tests.js" afterPath="$PROJECT_DIR$/test/tests.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sdq.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/jquery.sdq.js" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362785716022" ignored="false" />
+    <file path="/jquery.sdq.js" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362857580395" ignored="false" />
     <file path="/readme.md" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362771363094" ignored="false" />
-    <file path="/Dummy.txt" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362845632867" ignored="false" />
-    <file path="/a.js" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362787217851" ignored="false" />
+    <file path="/Dummy.txt" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362854778757" ignored="false" />
+    <file path="/ejemplo.html" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362855335068" ignored="false" />
+    <file path="/Estructura Comprobantes Fiscales.txt" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362856023071" ignored="false" />
+    <file path="/tests.js" changelist="c8b35231-e66c-4b7d-b618-4b9201702734" time="1362857682376" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +57,18 @@
         <option value="$PROJECT_DIR$/sdq.jquery.json" />
         <option value="$PROJECT_DIR$/build/compile.py" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/example/ejemplo.html" />
+        <option value="$PROJECT_DIR$/doc/Estructura Comprobantes Fiscales.txt" />
         <option value="$PROJECT_DIR$/src/jquery.sdq.js" />
         <option value="$PROJECT_DIR$/test/tests.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="1058" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -70,10 +77,64 @@
           <State>
             <id />
           </State>
+          <State>
+            <id>ActionScript specificJavaScript</id>
+          </State>
+          <State>
+            <id>Assignment issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Bitwise operation issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript function metricsJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+          <State>
+            <id>JsTestDriverJavaScript</id>
+          </State>
+          <State>
+            <id>Naming conventionsJavaScript</id>
+          </State>
+          <State>
+            <id>Node.jsJavaScript</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>CoffeeScript</id>
+            <id>JSLint</id>
           </State>
         </selected-state>
       </profile-state>
@@ -119,7 +180,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sdq" />
+              <option name="myItemId" value="SDQ" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -129,7 +190,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sdq" />
+              <option name="myItemId" value="SDQ" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -143,11 +204,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sdq" />
+              <option name="myItemId" value="SDQ" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="example" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -157,11 +218,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sdq" />
+              <option name="myItemId" value="SDQ" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -173,12 +234,30 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="Errors" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="Settings.JavaScript.Linters.JSLint" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/external/jquery-1.8.3.js" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Websites\SDQ\doc" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JsTestDriver.validarRNC.test La longitud no debe ser mayor de 11">
+    <configuration default="false" name="validarRNC.test La longitud no debe ser mayor de 11" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_METHOD" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="" />
+      <setting name="jsFile" value="$PROJECT_DIR$/test/tests.js" />
+      <setting name="testCase" value="validarRNC" />
+      <setting name="testMethod" value="test La longitud no debe ser mayor de 11" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -187,7 +266,28 @@
       <option name="testName" />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JsTestDriver.validarRNC.test La longitud no debe ser mayor de 11" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JsTestDriver.validarRNC.test La longitud no debe ser mayor de 11" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
@@ -215,16 +315,37 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1058" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2827298" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17712177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15525758" sideWeight="0.7172702" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956952" sideWeight="0.7172702" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -298,9 +419,20 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/jquery.sdq.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="36" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/tests.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="89" selection-start="400" selection-end="400" vertical-scroll-proportion="0.27317882" />
+        <state line="1" column="24" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
@@ -310,28 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/compile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0955414" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/ejemplo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="67" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.53833604">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MIT-LICENSE.TXT">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdq.jquery.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="19" selection-start="20" selection-end="20" vertical-scroll-proportion="0.024834437">
@@ -339,19 +449,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jquery.sdq.js">
+    <entry file="file://$PROJECT_DIR$/build/compile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="62" selection-end="62" vertical-scroll-proportion="-3.0625">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="4" column="12" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0955414" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/jquery.sdq.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1201" column="29" selection-start="18591" selection-end="18591" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/ejemplo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="55" selection-start="841" selection-end="841" vertical-scroll-proportion="1.3218143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/tests.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="37" selection-start="181" selection-end="181" vertical-scroll-proportion="0.25701943">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/Estructura Comprobantes Fiscales.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="789" selection-end="789" vertical-scroll-proportion="0.83435583">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="101" selection-start="2798" selection-end="2798" vertical-scroll-proportion="0.54805726">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jquery.sdq.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="56" selection-start="3659" selection-end="3659" vertical-scroll-proportion="0.5419223">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
