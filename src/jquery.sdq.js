@@ -4,8 +4,7 @@
 
 	var methods = {
 		cedula : function( options ) { 
-		  
-		  	this.on('keypress', soloNumeros);
+			this.on('keypress', soloNumeros);
 			this.on('keypress', formatCedula);
 			this.on('paste', antiPaste);
 			return this;
@@ -83,27 +82,35 @@
 	}
 
 	formatCedula = function(e){
-		var entrada, valorCampo, longitudCampo, longitudPermitida;
+		var entrada, valorCampo, longitudCampo, longitudPermitida, $target;
+
+		$target = $(e.currentTarget);
 
 		longitudPermitida = 11;
 
+		cedulaPatron = /(^\d{3}$)|(^\d{3} \d{7}$)/;
+
 		entrada = String.fromCharCode(e.which);
+
 		if (!/^\d+$/.test(entrada)) {
-  			return false;
+			return false;
 		}
 
-		valorCampo = $(e.currentTarget).val();
+		valorCampo = $target.val();
 
 		longitudCampo = (valorCampo.replace(/\D/g, '') + entrada).length;
 
 		if (longitudCampo > longitudPermitida) {
 			return false;
 		};
-
+		if (cedulaPatron.test(valorCampo)){
+			e.preventDefault();
+			return $target.val(valorCampo + ' ' + entrada);;
+		} else if (cedulaPatron.test(valorCampo + entrada)) {
+			e.preventDefault();
+			return $target.val(valorCampo + entrada + ' ');
+		}
 		return true;
-
-
-		// TODO: Falta mucho aqui aun!!!!....
 
 	};
 
