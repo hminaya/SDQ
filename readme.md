@@ -22,6 +22,7 @@ if (!$.SDQ.validarCedula(entrada)) {
 Los tipos de documentos que se manejan son:
 * Cedula de identidad y electoral - JCE
 * Registro Nacional de Contribuyente (RNC) - DGII {acaba de ser agregado - beta}
+* Numero de comprobante fiscal (NCF) - DGII {acaba de ser agregado - beta}
 * Numero de Seguridad Social (NSS) - TSS {pendiente}
 
 ##¿Como incluirlo en su proyecto?
@@ -86,6 +87,30 @@ Ejemplo:
 
 ``` javascript
 $.SDQ.validarRNC('A234567XX'); // => False
+```
+
+### $.fn.SDQ('ncf');
+Le da formato a un campo para introducir un NCF:
+* Permite la entrada de datos de acuerdo a la estructura de un NCF (pendiente)
+* Maneja el paste para evitar chars invalidos
+* Controla la longitud (pendiente)
+
+Ejemplo:
+
+``` javascript
+$('#campoNCF').SDQ('ncf');
+```
+
+### $.SDQ.validarNCF(numero);
+Valida si la información recibida corresponde a un NCF:
+* Compara contra el algoritmo (pendiente)
+* Solo puede contener numeros y letras de acuerdo a las especificaciones
+* Valida la longitud
+
+Ejemplo:
+
+``` javascript
+$.SDQ.validarNCF('A999999999999999999'); // => False
 ```
 
 ### $.fn.SDQ('nss');
