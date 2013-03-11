@@ -27,17 +27,10 @@ Los tipos de documentos que se manejan son:
 
 ##¿Como incluirlo en su proyecto?
 
-####Opción #1
-Puedes bajar la ultima versión de esta libreria, disponible en https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js e incluirlo junto con sus otros scripts.
+Puedes bajar la ultima versión de esta libreria, disponible en https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js e incluirlo junto con sus otros scripts. Recuerda que debes tener incluido jQuery para poder utilizar esta libreria.
 
-####Opción #2
-Puedes hacer referencia directamente a la ultima versión de la libreria, hosteada en github:
 
-``` html
-<script src="https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js"></script>
-```
-
-##API
+##API - Cedula
 
 ### $.fn.SDQ('cedula');
 Le da formato a un campo para introducir una cedula:
@@ -64,6 +57,8 @@ Ejemplo:
 $.SDQ.validarCedula('00113918315'); // => False
 ```
 
+##API - RNC
+
 ### $.fn.SDQ('rnc');
 Le da formato a un campo para introducir un RNC:
 * Solo permite que se puedan introducir numeros
@@ -89,6 +84,8 @@ Ejemplo:
 $.SDQ.validarRNC('A234567XX'); // => False
 ```
 
+##API - NCF
+
 ### $.fn.SDQ('ncf');
 Le da formato a un campo para introducir un NCF:
 * Permite la entrada de datos de acuerdo a la estructura de un NCF (pendiente)
@@ -112,6 +109,8 @@ Ejemplo:
 ``` javascript
 $.SDQ.validarNCF('A999999999999999999'); // => False
 ```
+
+##API - NSS
 
 ### $.fn.SDQ('nss');
 Le da formato a un campo para introducir un NSS:
@@ -137,3 +136,14 @@ Ejemplo:
 ``` javascript
 $.SDQ.validarNSS('A234567XX'); // => False
 ```
+
+##¿Como contribuir?
+Si quieres contribuir en este proyecto puedes comenzar con uno de los [issues pendientes](https://github.com/hminaya/SDQ/issues?state=open) o puedes proponer tus propias ideas. Antes de hacer tu pull request pasa tu codigo por JSLint.
+
+Actualmente [estamos trabajando](https://github.com/hminaya/SDQ/contributors) en este proyecto:
+* @hminaya
+* @amhed
+* @lurraca
+* @rmariuzzo
+* @jfsanchez2k
+
