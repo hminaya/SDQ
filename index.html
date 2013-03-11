@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="jQuery.SDQ : Un plugin de jQuery open source para el manejo de Cedula, RNC, NCFs y otros documentos utilizados en la Republica Dominicana" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>jQuery.SDQ</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hminaya/SDQ">View on GitHub</a>
+
+          <h1 id="project_title">jQuery.SDQ</h1>
+          <h2 id="project_tagline">Un plugin de jQuery open source para el manejo de Cedula, RNC, NCFs y otros documentos utilizados en la Republica Dominicana</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hminaya/SDQ/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hminaya/SDQ/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>jQuery.SDQ</h1>
+
+<p>Es un plugin de jQuery Open Source para validar diversos tipos de documentos y darle formato a los campos de entradas.</p>
+
+<p>Por ejemplo, puedes darle el formato debido a un campo haciendo lo siguiente:</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#CampoCedula"</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'cedula'</span><span class="p">);</span>
+</pre></div>
+
+<p>y luego, cuando vas a someter tu formulario puedes proceder a hacer tus validaciones de la siguiente manera:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">entrada</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#CampoCedula"</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarCedula</span><span class="p">(</span><span class="nx">entrada</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">alert</span> <span class="p">(</span><span class="s1">'El numero de cedula es invalido'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Los tipos de documentos que se manejan son:</p>
+
+<ul>
+<li>Cedula de identidad y electoral - JCE</li>
+<li>Registro Nacional de Contribuyente (RNC) - DGII {acaba de ser agregado - beta}</li>
+<li>Numero de comprobante fiscal (NCF) - DGII {acaba de ser agregado - beta}</li>
+<li>Numero de Seguridad Social (NSS) - TSS {pendiente}</li>
+</ul><h2>¿Como incluirlo en su proyecto?</h2>
+
+<h4>Opción #1</h4>
+
+<p>Puedes bajar la ultima versión de esta libreria, disponible en <a href="https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js">https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js</a> e incluirlo junto con sus otros scripts.</p>
+
+<h4>Opción #2</h4>
+
+<p>Puedes hacer referencia directamente a la ultima versión de la libreria, hosteada en github:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<h2>API</h2>
+
+<h3>$.fn.SDQ('cedula');</h3>
+
+<p>Le da formato a un campo para introducir una cedula:</p>
+
+<ul>
+<li>Solo permite que se puedan introducir numeros</li>
+<li>Maneja el paste para evitar chars invalidos</li>
+<li>Solo permite longitud de 11</li>
+</ul><p>Ejemplo:</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#campoCedula'</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'cedula'</span><span class="p">);</span>
+</pre></div>
+
+<h3>$.SDQ.validarCedula(numero);</h3>
+
+<p>Valida si la información recibida corresponde a un numero de cedula:</p>
+
+<ul>
+<li>Compara contra el algoritmo de LUHN utilizando mod 10</li>
+<li>Maneja un listado de cedulas que fueron emitidas por la JCE, pero que no cumplen con el algoritmo anterior</li>
+<li>Solo puede contener numeros</li>
+<li>Valida la longitud</li>
+</ul><p>Ejemplo:</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarCedula</span><span class="p">(</span><span class="s1">'00113918315'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
+</pre></div>
+
+<h3>$.fn.SDQ('rnc');</h3>
+
+<p>Le da formato a un campo para introducir un RNC:</p>
+
+<ul>
+<li>Solo permite que se puedan introducir numeros</li>
+<li>Maneja el paste para evitar chars invalidos</li>
+<li>Solo permite longitud de 9</li>
+</ul><p>Ejemplo:</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#campoRNC'</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'rnc'</span><span class="p">);</span>
+</pre></div>
+
+<h3>$.SDQ.validarRNC(numero);</h3>
+
+<p>Valida si la información recibida corresponde a un RNC:</p>
+
+<ul>
+<li>Compara contra el algoritmo</li>
+<li>Maneja un listado de RNCs que fueron emitidos por la DGII, pero que no cumplen con el algoritmo anterior //TODO: Pendiente</li>
+<li>Solo puede contener numeros</li>
+<li>Valida la longitud</li>
+</ul><p>Ejemplo:</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarRNC</span><span class="p">(</span><span class="s1">'A234567XX'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
+</pre></div>
+
+<h3>$.fn.SDQ('ncf');</h3>
+
+<p>Le da formato a un campo para introducir un NCF:</p>
+
+<ul>
+<li>Permite la entrada de datos de acuerdo a la estructura de un NCF (pendiente)</li>
+<li>Maneja el paste para evitar chars invalidos</li>
+<li>Controla la longitud (pendiente)</li>
+</ul><p>Ejemplo:</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#campoNCF'</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'ncf'</span><span class="p">);</span>
+</pre></div>
+
+<h3>$.SDQ.validarNCF(numero);</h3>
+
+<p>Valida si la información recibida corresponde a un NCF:</p>
+
+<ul>
+<li>Compara contra el algoritmo (pendiente)</li>
+<li>Solo puede contener numeros y letras de acuerdo a las especificaciones</li>
+<li>Valida la longitud</li>
+</ul><p>Ejemplo:</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarNCF</span><span class="p">(</span><span class="s1">'A999999999999999999'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
+</pre></div>
+
+<h3>$.fn.SDQ('nss');</h3>
+
+<p>Le da formato a un campo para introducir un NSS:</p>
+
+<ul>
+<li>Solo permite que se puedan introducir numeros</li>
+<li>Maneja el paste para evitar chars invalidos</li>
+<li>Solo permite longitud de XX //TODO: Pendiente</li>
+</ul><p>Ejemplo:</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#campoNSS'</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'nss'</span><span class="p">);</span>
+</pre></div>
+
+<h3>$.SDQ.validarNSS(numero);</h3>
+
+<p>Valida si la información recibida corresponde a un NSS:</p>
+
+<ul>
+<li>Compara contra el algoritmo XX // TODO: Pendiente</li>
+<li>Maneja un listado de NSS que fueron emitidos por la TSS, pero que no cumplen con el algoritmo anterior //TODO: Pendiente</li>
+<li>Solo puede contener numeros</li>
+<li>Valida la longitud //TODO: Pendiente</li>
+</ul><p>Ejemplo:</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarNSS</span><span class="p">(</span><span class="s1">'A234567XX'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
+</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">jQuery.SDQ maintained by <a href="https://github.com/hminaya">hminaya</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
