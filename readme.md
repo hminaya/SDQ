@@ -141,9 +141,9 @@ $.SDQ.validarNSS('A234567XX'); // => False
 Si quieres contribuir en este proyecto puedes comenzar con uno de los [issues pendientes](https://github.com/hminaya/SDQ/issues?state=open) o puedes proponer tus propias ideas. Antes de hacer tu pull request pasa tu codigo por JSLint.
 
 Actualmente [estamos trabajando](https://github.com/hminaya/SDQ/contributors) en este proyecto:
-* @hminaya
-* @amhed
-* @lurraca
-* @rmariuzzo
-* @jfsanchez2k
+* [@hminaya](https://github.com/hminaya)
+* [@amhed](https://github.com/amhed)
+* [@lurraca](https://github.com/lurraca)
+* [@rmariuzzo](https://github.com/rmariuzzo)
+* [@jfsanchez2k](https://github.com/jfsanchez2k)
 
