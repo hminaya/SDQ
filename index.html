@@ -59,18 +59,9 @@
 <li>Numero de Seguridad Social (NSS) - TSS {pendiente}</li>
 </ul><h2>¿Como incluirlo en su proyecto?</h2>
 
-<h4>Opción #1</h4>
+<p>Puedes bajar la ultima versión de esta libreria, disponible en <a href="https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js">https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js</a> e incluirlo junto con sus otros scripts. Recuerda que debes tener incluido jQuery para poder utilizar esta libreria.</p>
 
-<p>Puedes bajar la ultima versión de esta libreria, disponible en <a href="https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js">https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js</a> e incluirlo junto con sus otros scripts.</p>
-
-<h4>Opción #2</h4>
-
-<p>Puedes hacer referencia directamente a la ultima versión de la libreria, hosteada en github:</p>
-
-<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></div>
-
-<h2>API</h2>
+<h2>API - Cedula</h2>
 
 <h3>$.fn.SDQ('cedula');</h3>
 
@@ -99,6 +90,8 @@
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarCedula</span><span class="p">(</span><span class="s1">'00113918315'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
 </pre></div>
 
+<h2>API - RNC</h2>
+
 <h3>$.fn.SDQ('rnc');</h3>
 
 <p>Le da formato a un campo para introducir un RNC:</p>
@@ -126,6 +119,8 @@
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarRNC</span><span class="p">(</span><span class="s1">'A234567XX'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
 </pre></div>
 
+<h2>API - NCF</h2>
+
 <h3>$.fn.SDQ('ncf');</h3>
 
 <p>Le da formato a un campo para introducir un NCF:</p>
@@ -151,6 +146,8 @@
 
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarNCF</span><span class="p">(</span><span class="s1">'A999999999999999999'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
 </pre></div>
+
+<h2>API - NSS</h2>
 
 <h3>$.fn.SDQ('nss');</h3>
 
@@ -178,6 +175,20 @@
 
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarNSS</span><span class="p">(</span><span class="s1">'A234567XX'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
 </pre></div>
+
+<h2>¿Como contribuir?</h2>
+
+<p>Si quieres contribuir en este proyecto puedes comenzar con uno de los <a href="https://github.com/hminaya/SDQ/issues?state=open">issues pendientes</a> o puedes proponer tus propias ideas. Antes de hacer tu pull request pasa tu codigo por JSLint.</p>
+
+<p>Actualmente <a href="https://github.com/hminaya/SDQ/contributors">estamos trabajando</a> en este proyecto:</p>
+
+<ul>
+<li><a href="https://github.com/hminaya">@hminaya</a></li>
+<li><a href="https://github.com/amhed">@amhed</a></li>
+<li><a href="https://github.com/lurraca">@lurraca</a></li>
+<li><a href="https://github.com/rmariuzzo">@rmariuzzo</a></li>
+<li><a href="https://github.com/jfsanchez2k">@jfsanchez2k</a></li>
+</ul>
       </section>
     </div>
 
