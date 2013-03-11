@@ -160,6 +160,9 @@
                 //this.on('keypress', formatCedula);
                 this.on('paste', antiPaste);
                 return this;
+            },
+            ncf: function (options){
+                return this;
             }
         },
 
