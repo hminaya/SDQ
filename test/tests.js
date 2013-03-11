@@ -77,5 +77,6 @@ test("NCF tiene longitud y estructura correcta", function () {
 test("NCF posee un tipo de comprobante valido", function () {
     ok($.SDQ.validarNCF('A010010010100000004') === true, "OK, tipo de comprobante valor fiscal");
     ok($.SDQ.validarNCF('A010010010200000004') === true, "OK, tipo de comprobante consumidor final");
-    ok($.SDQ.validarNCF('A010010010600000004') === false, "Tipo de comprobante que no existe");
+    ok($.SDQ.validarNCF('AA10010010600000004') === false, "Tipo de comprobante que no existe");
+    ok($.SDQ.validarNCF('Z010010010600000004') === false, "Tipo de comprobante que no existe");
 });
