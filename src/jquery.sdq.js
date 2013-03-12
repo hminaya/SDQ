@@ -144,25 +144,49 @@
 
         methods = {
             cedula: function (options) {
-                this.on('keypress', soloNumeros);
-                this.on('keypress', formatCedula);
-                this.on('paste', antiPaste);
-                return this;
+                var self = this;
+                self.on('keypress', soloNumeros);
+                self.on('keypress', formatCedula);
+                self.on('paste', antiPaste);
+
+                self.validar = function () {
+                    return $.SDQ.validarCedula(self.val());
+                };
+
+                return self;
             },
             rnc: function (options) {
-                this.on('keypress', soloNumeros);
-                //this.on('keypress', formatCedula);
-                this.on('paste', antiPaste);
-                return this;
+                var self = this;
+                self.on('keypress', soloNumeros);
+                //self.on('keypress', formatCedula);
+                self.on('paste', antiPaste);
+                
+                self.validar = function () {
+                    return $.SDQ.validarRNC(self.val());
+                };
+
+                return self;
             },
             nss: function (options) {
-                this.on('keypress', soloNumeros);
-                //this.on('keypress', formatCedula);
-                this.on('paste', antiPaste);
-                return this;
+                var self = this;
+                self.on('keypress', soloNumeros);
+                //self.on('keypress', formatCedula);
+                self.on('paste', antiPaste);
+                
+                self.validar = function () {
+                    return $.SDQ.validarNSS(self.val());
+                };
+
+                return self;
             },
             ncf: function (options){
-                return this;
+                var self = this;
+
+                self.validar = function () {
+                    return $.SDQ.validarNCF(self.val());
+                };
+
+                return self;
             }
         },
 
