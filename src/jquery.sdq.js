@@ -22,6 +22,26 @@
             return !!/[\d\s]/.test(input);
         },
 
+        soloNCF = function (e) {
+            var longitudPermitida = 19,
+                keysPermitidos = [8, 46],
+                input = String.fromCharCode(e.which),
+                currentValue = $(e.currentTarget).val();
+
+            //Si el valor es igual a cero quiere se prueba que le primer caracter este en el rango alfabetico
+            if (currentValue.length === 0) {
+                return (/[a-uA-U]/).test(input);
+            }
+            if (keysPermitidos.indexOf(e.which) !== -1) {
+                return true;
+            }
+            if (currentValue.length === longitudPermitida) {
+                return false;
+            }
+
+            return soloNumeros(e);
+        },
+
         antiPaste = function (e) {
             var valor,
                 valorAnterior = $(e.currentTarget).val();
@@ -160,7 +180,7 @@
                 self.on('keypress', soloNumeros);
                 //self.on('keypress', formatCedula);
                 self.on('paste', antiPaste);
-                
+
                 self.validar = function () {
                     return $.SDQ.validarRNC(self.val());
                 };
@@ -172,20 +192,20 @@
                 self.on('keypress', soloNumeros);
                 //self.on('keypress', formatCedula);
                 self.on('paste', antiPaste);
-                
+
                 self.validar = function () {
                     return $.SDQ.validarNSS(self.val());
                 };
 
                 return self;
             },
-            ncf: function (options){
+            ncf: function (options) {
                 var self = this;
+                self.on('keypress', soloNCF);
 
                 self.validar = function () {
                     return $.SDQ.validarNCF(self.val());
                 };
-
                 return self;
             }
         },
