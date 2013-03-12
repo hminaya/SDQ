@@ -37,14 +37,12 @@
 
 <p>Por ejemplo, puedes darle el formato debido a un campo haciendo lo siguiente:</p>
 
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#CampoCedula"</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'cedula'</span><span class="p">);</span>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">cedula</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#CampoCedula"</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'cedula'</span><span class="p">);</span>
 </pre></div>
 
 <p>y luego, cuando vas a someter tu formulario puedes proceder a hacer tus validaciones de la siguiente manera:</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">entrada</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#CampoCedula"</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarCedula</span><span class="p">(</span><span class="nx">entrada</span><span class="p">))</span> <span class="p">{</span>
+<div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">cedula</span><span class="p">.</span><span class="nx">validar</span><span class="p">())</span> <span class="p">{</span>
     <span class="nx">alert</span> <span class="p">(</span><span class="s1">'El numero de cedula es invalido'</span><span class="p">);</span>
     <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
 <span class="p">}</span>
@@ -90,6 +88,14 @@
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarCedula</span><span class="p">(</span><span class="s1">'00113918315'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
 </pre></div>
 
+<h3>Alternativa</h3>
+
+<p>otra forma de validar un input de cedula es de la siguiente manera:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">cedula</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#campoCedula'</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'cedula'</span><span class="p">);</span>
+<span class="nx">cedula</span><span class="p">.</span><span class="nx">validar</span><span class="p">()</span> <span class="c1">// =&gt; Toma el valor del campo y se la pasa al metodo $.SDQ.validarCedula()</span>
+</pre></div>
+
 <h2>API - RNC</h2>
 
 <h3>$.fn.SDQ('rnc');</h3>
@@ -119,6 +125,14 @@
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarRNC</span><span class="p">(</span><span class="s1">'A234567XX'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
 </pre></div>
 
+<h3>Alternativa</h3>
+
+<p>otra forma de validar un input de rnc es de la siguiente manera:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">rnc</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#campoRNC'</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'rnc'</span><span class="p">);</span>
+<span class="nx">rnc</span><span class="p">.</span><span class="nx">validar</span><span class="p">()</span> <span class="c1">// =&gt; Toma el valor del campo y se la pasa al metodo $.SDQ.validarRNC()</span>
+</pre></div>
+
 <h2>API - NCF</h2>
 
 <h3>$.fn.SDQ('ncf');</h3>
@@ -145,6 +159,14 @@
 </ul><p>Ejemplo:</p>
 
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarNCF</span><span class="p">(</span><span class="s1">'A999999999999999999'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
+</pre></div>
+
+<h3>Alternativa</h3>
+
+<p>otra forma de validar un input de ncf es de la siguiente manera:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">ncf</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#campoNCF'</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'ncf'</span><span class="p">);</span>
+<span class="nx">ncf</span><span class="p">.</span><span class="nx">validar</span><span class="p">()</span> <span class="c1">// =&gt; Toma el valor del campo y se la pasa al metodo $.SDQ.validarNCF()</span>
 </pre></div>
 
 <h2>API - NSS</h2>
@@ -176,6 +198,14 @@
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">SDQ</span><span class="p">.</span><span class="nx">validarNSS</span><span class="p">(</span><span class="s1">'A234567XX'</span><span class="p">);</span> <span class="c1">// =&gt; False</span>
 </pre></div>
 
+<h3>Alternativa</h3>
+
+<p>otra forma de validar un input de nss es de la siguiente manera:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">nss</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#campoNSS'</span><span class="p">).</span><span class="nx">SDQ</span><span class="p">(</span><span class="s1">'nss'</span><span class="p">);</span>
+<span class="nx">nss</span><span class="p">.</span><span class="nx">validar</span><span class="p">()</span> <span class="c1">// =&gt; Toma el valor del campo y se la pasa al metodo $.SDQ.validarNSS()</span>
+</pre></div>
+
 <h2>¿Como contribuir?</h2>
 
 <p>Si quieres contribuir en este proyecto puedes comenzar con uno de los <a href="https://github.com/hminaya/SDQ/issues?state=open">issues pendientes</a> o puedes proponer tus propias ideas. Antes de hacer tu pull request pasa tu codigo por JSLint.</p>
@@ -188,6 +218,7 @@
 <li><a href="https://github.com/lurraca">@lurraca</a></li>
 <li><a href="https://github.com/rmariuzzo">@rmariuzzo</a></li>
 <li><a href="https://github.com/jfsanchez2k">@jfsanchez2k</a></li>
+<li><a href="https://github.com/gpopoteur">@gpopoteur</a></li>
 </ul>
       </section>
     </div>
