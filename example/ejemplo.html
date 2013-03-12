@@ -136,13 +136,16 @@
 
         $(function () {
 
+            var cedula = $("#Cedula").SDQ("cedula"),
+                rnc = $("#RNC").SDQ("rnc"),
+                ncf = $("#ComprobanteFiscal").SDQ("ncf");
+
             $("#ValidarCedula").click(function () {
-                var entrada = $("#Cedula").val();
                 var msgSpan = $(this).parent().find(".validationMessage")
                                      .removeClass("label-important")
                                      .removeClass("label-success");
 
-                if ($.SDQ.validarCedula(entrada)) {
+                if (cedula.validar()) {
                     msgSpan.addClass("").text("Cédula válida").addClass("label-success");
                 } else{
                     msgSpan.addClass("").text("No es una cédula!").addClass("label-important");
@@ -151,12 +154,11 @@
             });
 
             $("#ValidarRNC").click(function(){
-                var entrada = $("#RNC").val();
                 var msgSpan = $(this).parent().find(".validationMessage")
                         .removeClass("label-important")
                         .removeClass("label-success");
 
-                if ($.SDQ.validarRNC(entrada)) {
+                if (rnc.validar()) {
                     msgSpan.addClass("").text("RNC válido").addClass("label-success");
                 } else{
                     msgSpan.addClass("").text("Seguro que esto es un RNC? no parece!").addClass("label-important");
@@ -165,18 +167,15 @@
             });
 
             $("#ValidarComprobante").click(function(){
-                var entrada = $("#ComprobanteFiscal").val();
                 var msgSpan = $(this).parent().find(".validationMessage")
                         .removeClass("label-important")
                         .removeClass("label-success");
-                if ($.SDQ.validarNCF(entrada)) {
+                if (ncf.validar()) {
                     msgSpan.addClass("").text("Comprobante OK").addClass("label-success");
                 } else{
                     msgSpan.addClass("").text("Comprobante not OK!").addClass("label-important");
                 };
             });
-
-            $("#Cedula").SDQ("cedula");
             $("#ComprobanteFiscal").SDQ("ncf");
         });
     </script>

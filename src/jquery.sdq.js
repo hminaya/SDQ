@@ -164,27 +164,49 @@
 
         methods = {
             cedula: function (options) {
-                this.on('keypress', soloNumeros);
-                this.on('keypress', formatCedula);
-                this.on('paste', antiPaste);
-                return this;
+                var self = this;
+                self.on('keypress', soloNumeros);
+                self.on('keypress', formatCedula);
+                self.on('paste', antiPaste);
+
+                self.validar = function () {
+                    return $.SDQ.validarCedula(self.val());
+                };
+
+                return self;
             },
             rnc: function (options) {
-                this.on('keypress', soloNumeros);
-                //this.on('keypress', formatCedula);
-                this.on('paste', antiPaste);
-                return this;
+                var self = this;
+                self.on('keypress', soloNumeros);
+                //self.on('keypress', formatCedula);
+                self.on('paste', antiPaste);
+
+                self.validar = function () {
+                    return $.SDQ.validarRNC(self.val());
+                };
+
+                return self;
             },
             nss: function (options) {
-                this.on('keypress', soloNumeros);
-                //this.on('keypress', formatCedula);
-                this.on('paste', antiPaste);
-                return this;
+                var self = this;
+                self.on('keypress', soloNumeros);
+                //self.on('keypress', formatCedula);
+                self.on('paste', antiPaste);
+
+                self.validar = function () {
+                    return $.SDQ.validarNSS(self.val());
+                };
+
+                return self;
             },
             ncf: function (options) {
-                //TODO: Pregunta: a que se refiere "this" aqui? porque la funcion crea un nuevo scope
-                this.on('keypress', soloNCF);
-                return this;
+                var self = this;
+                self.on('keypress', soloNCF);
+
+                self.validar = function () {
+                    return $.SDQ.validarNCF(self.val());
+                };
+                return self;
             }
         },
 
