@@ -22,6 +22,26 @@
             return !!/[\d\s]/.test(input);
         },
 
+        soloNCF = function (e) {
+            var longitudPermitida = 19,
+                keysPermitidos = [8, 46],
+                input = String.fromCharCode(e.which),
+                currentValue = $(e.currentTarget).val();
+
+            //Si el valor es igual a cero quiere se prueba que le primer caracter este en el rango alfabetico
+            if (currentValue.length === 0) {
+                return (/[a-uA-U]/).test(input);
+            }
+            if (keysPermitidos.indexOf(e.which) !== -1) {
+                return true;
+            }
+            if (currentValue.length === longitudPermitida) {
+                return false;
+            }
+
+            return soloNumeros(e);
+        },
+
         antiPaste = function (e) {
             var valor,
                 valorAnterior = $(e.currentTarget).val();
@@ -161,7 +181,9 @@
                 this.on('paste', antiPaste);
                 return this;
             },
-            ncf: function (options){
+            ncf: function (options) {
+                //TODO: Pregunta: a que se refiere "this" aqui? porque la funcion crea un nuevo scope
+                this.on('keypress', soloNCF);
                 return this;
             }
         },
