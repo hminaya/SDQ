@@ -5,15 +5,13 @@ Es un plugin de jQuery Open Source para validar diversos tipos de documentos y d
 Por ejemplo, puedes darle el formato debido a un campo haciendo lo siguiente:
 
 ``` javascript
-$("#CampoCedula").SDQ('cedula');
+var cedula = $("#CampoCedula").SDQ('cedula');
 ```
 
 y luego, cuando vas a someter tu formulario puedes proceder a hacer tus validaciones de la siguiente manera:
 
 ``` javascript
-var entrada = $("#CampoCedula").val();
-
-if (!$.SDQ.validarCedula(entrada)) {
+if (!cedula.validar()) {
 	alert ('El numero de cedula es invalido');
 	return false;
 }
@@ -57,6 +55,14 @@ Ejemplo:
 $.SDQ.validarCedula('00113918315'); // => False
 ```
 
+### Alternativa
+otra forma de validar un input de cedula es de la siguiente manera:
+
+ ``` javascript
+var cedula = $('#campoCedula').SDQ('cedula');
+cedula.validar() // => Toma el valor del campo y se la pasa al metodo $.SDQ.validarCedula()
+```
+
 ##API - RNC
 
 ### $.fn.SDQ('rnc');
@@ -84,6 +90,14 @@ Ejemplo:
 $.SDQ.validarRNC('A234567XX'); // => False
 ```
 
+### Alternativa
+otra forma de validar un input de rnc es de la siguiente manera:
+
+ ``` javascript
+var rnc = $('#campoRNC').SDQ('rnc');
+rnc.validar() // => Toma el valor del campo y se la pasa al metodo $.SDQ.validarRNC()
+```
+
 ##API - NCF
 
 ### $.fn.SDQ('ncf');
@@ -108,6 +122,14 @@ Ejemplo:
 
 ``` javascript
 $.SDQ.validarNCF('A999999999999999999'); // => False
+```
+
+### Alternativa
+otra forma de validar un input de ncf es de la siguiente manera:
+
+ ``` javascript
+var ncf = $('#campoNCF').SDQ('ncf');
+ncf.validar() // => Toma el valor del campo y se la pasa al metodo $.SDQ.validarNCF()
 ```
 
 ##API - NSS
@@ -137,6 +159,14 @@ Ejemplo:
 $.SDQ.validarNSS('A234567XX'); // => False
 ```
 
+### Alternativa
+otra forma de validar un input de nss es de la siguiente manera:
+
+ ``` javascript
+var nss = $('#campoNSS').SDQ('nss');
+nss.validar() // => Toma el valor del campo y se la pasa al metodo $.SDQ.validarNSS()
+```
+
 ##¿Como contribuir?
 Si quieres contribuir en este proyecto puedes comenzar con uno de los [issues pendientes](https://github.com/hminaya/SDQ/issues?state=open) o puedes proponer tus propias ideas. Antes de hacer tu pull request pasa tu codigo por JSLint.
 
@@ -146,4 +176,5 @@ Actualmente [estamos trabajando](https://github.com/hminaya/SDQ/contributors) en
 * [@lurraca](https://github.com/lurraca)
 * [@rmariuzzo](https://github.com/rmariuzzo)
 * [@jfsanchez2k](https://github.com/jfsanchez2k)
+* [@gpopoteur](https://github.com/gpopoteur)
 
