@@ -226,7 +226,6 @@
             return methods.init.apply(this, arguments);
         }
 
-        //TODO: Si no se cumplen los IFs anteriores no hay retorno
         $.error('Method ' + method + ' does not exist on jQuery.SDQ');
     };
 
