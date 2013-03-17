@@ -126,7 +126,7 @@
         },
 
         formatCedula = function (e) {
-            var entrada, valorCampo, longitudCampo, keysPermitidos,
+            var entrada, valorCampo, longitudCampo,
                 longitudPermitida, cedulaPatron, $target;
 
             $target = $(e.currentTarget);
