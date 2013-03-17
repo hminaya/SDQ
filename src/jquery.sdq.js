@@ -140,12 +140,6 @@
             valorCampo = $target.val();
             longitudCampo = (valorCampo.replace(/\D/g, '') + entrada).length;
 
-            //teclas permitidas, para poder darle a back cuando el textbox esté lleno
-            keysPermitidos = [8, 46];
-            if (keysPermitidos.indexOf(e.which) !== -1) {
-                return true;
-            }
-
             if (longitudCampo > longitudPermitida) {
                 return false;
             }
@@ -176,7 +170,6 @@
             rnc: function (options) {
                 var self = this;
                 self.on('keypress', soloNumeros);
-                //self.on('keypress', formatCedula);
                 self.on('paste', antiPaste);
 
                 self.validar = function () {
@@ -188,7 +181,6 @@
             nss: function (options) {
                 var self = this;
                 self.on('keypress', soloNumeros);
-                //self.on('keypress', formatCedula);
                 self.on('paste', antiPaste);
 
                 self.validar = function () {
@@ -232,7 +224,6 @@
             return methods.init.apply(this, arguments);
         }
 
-        //TODO: Si no se cumplen los IFs anteriores no hay retorno
         $.error('Method ' + method + ' does not exist on jQuery.SDQ');
     };
 
