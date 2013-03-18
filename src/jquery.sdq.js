@@ -121,14 +121,12 @@
             //TODO: mejorar el regex para que valide los tipos de NCF posibles
             //Alguien que sepa más regular expressions que por favor lo ponga, mientras tanto aqui hay un arreglo
             //para que queden claros los que son validos
-            var tiposNcfPosibles = ['01', '02', '03', '04', '11', '12', '13', '14', '15'],
-                regExp = /[a-uA-U]\d{2}\d{3}\d{3}\d{2}\d{8}/;
-
+            var regExp = /[a-uA-U]\d{2}\d{3}\d{3}(0[1-4]|1[1-5])\d{8}/;
             return regExp.test(datos) && datos.length === 19;
         },
 
         formatCedula = function (e) {
-            var entrada, valorCampo, longitudCampo, keysPermitidos,
+            var entrada, valorCampo, longitudCampo,
                 longitudPermitida, cedulaPatron, $target;
 
             $target = $(e.currentTarget);
