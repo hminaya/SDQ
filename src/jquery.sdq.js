@@ -248,6 +248,11 @@
             return false;
         }
 
+        // No puede empezar con 000
+        if (datos.substring(0, 3) === "000") {
+            return false;
+        }
+        
         // Validar el listado
         if (jQuery.inArray(datos, excepcionesCedulas) > -1) {
             return true;
