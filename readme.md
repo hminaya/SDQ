@@ -23,11 +23,11 @@ Los tipos de documentos que se manejan son:
 * Número de Comprobante Fiscal (NCF) - DGII (beta)
 * Número de Seguridad Social (NSS) - TSS (pendiente)
 
-##¿Cómo  incluirlo en su proyecto?
+## ¿Cómo  incluirlo en su proyecto?
 
-Puedes bajar la última versión de esta librería, disponible en https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js e incluirlo junto con sus otros scripts. Recuerda que debes tener incluido jQuery para poder utilizar esta librería.
+Puedes bajar la última versión de esta librería, disponible [aquí](https://raw.github.com/hminaya/SDQ/master/lib/jquery.sdq.js) e incluirlo junto con sus otros scripts. Recuerda que debes tener incluido jQuery para poder utilizar esta librería.
 
-##API - Cédula
+## API - Cédula
 
 ### $.fn.SDQ('cedula');
 Le da formato a un campo para introducir una cédula:
@@ -54,14 +54,14 @@ $.SDQ.validarCedula('00113918315'); // => False
 ```
 
 ### Alternativa
-otra forma de validar un input de cédula es de la siguiente manera:
+Otra forma de validar un input de cédula es de la siguiente manera:
 
  ``` javascript
 var cedula = $('#campoCedula').SDQ('cedula');
 cedula.validar() // => Toma el valor del campo y se la pasa al método $.SDQ.validarCedula()
 ```
 
-##API - RNC
+## API - RNC
 
 ### $.fn.SDQ('rnc');
 Le da formato a un campo para introducir un RNC:
@@ -89,14 +89,14 @@ $.SDQ.validarRNC('A234567XX'); // => False
 ```
 
 ### Alternativa
-otra forma de validar un input de rnc es de la siguiente manera:
+Otra forma de validar un input de rnc es de la siguiente manera:
 
  ``` javascript
 var rnc = $('#campoRNC').SDQ('rnc');
 rnc.validar() // => Toma el valor del campo y se la pasa al método $.SDQ.validarRNC()
 ```
 
-##API - NCF
+## API - NCF
 
 ### $.fn.SDQ('ncf');
 Le da formato a un campo para introducir un NCF:
@@ -123,14 +123,14 @@ $.SDQ.validarNCF('A999999999999999999'); // => False
 ```
 
 ### Alternativa
-otra forma de validar un input de NCF es de la siguiente manera:
+Otra forma de validar un input de NCF es de la siguiente manera:
 
  ``` javascript
 var ncf = $('#campoNCF').SDQ('ncf');
 ncf.validar() // => Toma el valor del campo y se la pasa al método $.SDQ.validarNCF()
 ```
 
-##API - NSS
+## API - NSS
 
 ### $.fn.SDQ('nss');
 Le da formato a un campo para introducir un NSS:
@@ -158,14 +158,14 @@ $.SDQ.validarNSS('A234567XX'); // => False
 ```
 
 ### Alternativa
-otra forma de validar un input de NSS es de la siguiente manera:
+Otra forma de validar un input de NSS es de la siguiente manera:
 
  ``` javascript
 var nss = $('#campoNSS').SDQ('nss');
 nss.validar() // => Toma el valor del campo y se la pasa al método $.SDQ.validarNSS()
 ```
 
-##¿Cómo  contribuir?
+## ¿Cómo  contribuir?
 Si quieres contribuir en este proyecto puedes comenzar con uno de los [issues pendientes](https://github.com/hminaya/SDQ/issues?state=open) o puedes proponer tus propias ideas. Antes de hacer tu pull request pasa tu código por JSLint.
 
 Actualmente [estamos trabajando](https://github.com/hminaya/SDQ/contributors) en este proyecto:
